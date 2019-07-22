@@ -1,0 +1,16 @@
+{
+    "_template": "gh:hackoregon/2019-backend-cookiecutter-django", 
+    "data_science_repo_name": "Name of repo where data science work is contained", 
+    "data_science_repo_url": "URL of repo where data science work is contained", 
+    "email": "bhgrant8@gmail.com", 
+    "full_name": "Brian Grant", 
+    "gis_project": "True", 
+    "github_repo": "2019-examplar-backend", 
+    "github_username": "brianhgrant", 
+    "hack_oregon_team": "Examplar", 
+    "project_short_description": "Testing a deployment", 
+    "python_package_namespace": "hackoregon_examplar", 
+    "python_subpackage": "api", 
+    "version": "0.1.0", 
+    "year": "2019"
+}
