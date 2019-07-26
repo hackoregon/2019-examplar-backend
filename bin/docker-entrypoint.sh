@@ -38,5 +38,7 @@ python -Wall manage.py migrate
 echo "Collect static files"
 python -Wall manage.py collectstatic --noinput
 
+pip freeze
+
 echo "Run server..."
 gunicorn backend.wsgi -c gunicorn_conf.py
