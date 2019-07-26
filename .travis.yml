@@ -9,8 +9,8 @@ jobs:
 
     - stage: Test "Development" Docker Image
       if: tag IS present
-      install: bin/fetch-scripts.sh
-      script: cat bin/get-ssm-parameters.sh && bin/build.sh -d && bin/test.sh -d
+      # install: bin/fetch-scripts.sh
+      script: cat bin/get-ssm-parameters.sh && bin/build.sh -d
       # (_identical_ to production build except for -e
       # local directory package install instead of PyPI.org)
 
@@ -40,8 +40,8 @@ jobs:
     #       tags: true
 
     - stage: Docker Image
-      install: bin/fetch-scripts.sh
-      script: bin/build.sh -p && bin/test.sh -p
+      # install: bin/fetch-scripts.sh
+      script: bin/build.sh -p
       before_deploy: pip install awscli
       deploy:
         provider: script

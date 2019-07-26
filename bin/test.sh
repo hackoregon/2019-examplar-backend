@@ -9,20 +9,19 @@ while getopts ":dp" opt; do
           DEBUG=true
           if [ `uname -s` = "Linux" ]
           then
-            sudo docker-compose run --name test-api --entrypoint /code/bin/test-entrypoint.sh   --rm
+            sudo docker-compose run --name test-api --entrypoint /code/src_files/bin/test-entrypoint.sh   --rm
           else
-            docker-compose run --name test-api --entrypoint /code/bin/test-entrypoint.sh   --rm
+            docker-compose run --name test-api --entrypoint ./bin/test-entrypoint.sh  --rm
           fi
           ;;
         p)
           DEBUG=false
           if [ `uname -s` = "Linux" ]
           then
-            sudo docker-compose run --name test-api --entrypoint /code/bin/test-entrypoint.sh   --rm
+            sudo docker-compose run --name test-api --entrypoint /code/src_files/bin/test-entrypoint.sh   --rm
           else
-            docker-compose run --name test-api --entrypoint /code/bin/test-entrypoint.sh   --rm
+            docker-compose run --name test-api --entrypoint /code/src_files/bin/test-entrypoint.sh   --rm
           fi
-        *)
           usage
           ;;
     esac
