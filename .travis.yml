@@ -12,7 +12,7 @@ jobs:
       # install: bin/fetch-scripts.sh
       script: cat bin/get-ssm-parameters.sh && bin/build.sh -d
       # (_identical_ to production build except for -e
-      # local directory package install instead of PyPI.org)
+      # local directory package install indstead of PyPI.org)
 
     # - stage: GitHub Release
     #   install: skip

@@ -15,7 +15,7 @@ urlpatterns = [
     url(r'^examplar/schema/', schema_view),
     url(r'^examplar/api/', include('hackoregon_examplar.api.urls')),
     url(r'^examplar/health/', include('health_check.urls')),
-    url(r'^sandbox/docs/', include_docs_urls(title=api_title))
+    url(r'^examplar/docs/', include_docs_urls(title=api_title))
 ]
 
 url(r'^$', schema_view)
