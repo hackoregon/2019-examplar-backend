@@ -11,7 +11,7 @@ set -e
 # source usage per https://stackoverflow.com/q/14742358/452120 (iff running on travis-ci)
 echo Debug: "${DEBUG,,}"
 
-if ! "${DEBUG,,}" && ! $TRAVIS; then
+if [ ! "${DEBUG,,}" ] && [ ! "${TRAVIS}" ]; then
   source /code/bin/get-ssm-parameters.sh
 fi
 
