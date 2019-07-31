@@ -12,6 +12,7 @@ env
 # 2. echo out the parameter values so they can be used by the container apps
 # 3. determine the best place to run this script so that it populates the env vars before they're needed by other code
 
+
 EC2_REGION="$AWS_DEFAULT_REGION" # unfortunately cannot rely on dynamic env var values that this script is meant to pull in
 NAMESPACE="$DOCKER_REPO_NAMESPACE" # future-proofing this script for subsequent or past containers
 PROJECT_CANONICAL_NAME="$PROJECT_NAME" # must be set to each project's "Final naming convention" from here https://github.com/hackoregon/civic-devops/issues/1
