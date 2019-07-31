@@ -1,0 +1,1 @@
+default_app_config = 'hackoregon_examplar.api.apps.ApiConfig'
