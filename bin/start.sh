@@ -15,12 +15,12 @@ while getopts ":dpb" opt; do
           fi
           ;;
         p)
-          DEBUG=false
+          # DEBUG=false
           if [ `uname -s` = "Linux" ]
           then
-            sudo docker-compose up api
+            sudo docker-compose up
           else
-            docker-compose up api
+            docker-compose up
           fi
           ;;
         b)

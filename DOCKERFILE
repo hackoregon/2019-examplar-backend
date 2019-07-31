@@ -7,7 +7,7 @@ WORKDIR /code
 
 COPY /requirements/* /code/
 COPY hackoregon_examplar /code/hackoregon_examplar
-
+RUN ls
 RUN if [ "$DEBUG" = true  ] ; then pip install -r development.txt ; else pip install -r production.txt ; fi
 
 RUN python
