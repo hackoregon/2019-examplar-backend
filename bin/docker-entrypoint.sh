@@ -6,6 +6,7 @@
 # http://linuxcommand.org/lc3_man_pages/seth.html:
 # -e  Exit immediately if a command exits with a non-zero status.
 set -e
+echo "hi i am a container"
 
 # Pull in environment variables values from AWS Parameter Store, and preserve the exports
 # source usage per https://stackoverflow.com/q/14742358/452120 (iff running on travis-ci)

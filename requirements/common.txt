@@ -1,1 +1,2 @@
 # Space to add python packages common to both testing and development
+djangorestframework-gis
