@@ -9,6 +9,10 @@ set -e
 
 # Pull in environment variables values from AWS Parameter Store, and preserve the exports
 # source usage per https://stackoverflow.com/q/14742358/452120 (iff running on travis-ci)
+
+
+if [ -z ${DEBUG+x} ]; then echo "DEBUG var is unset, setting to False" && export DEBUG=false ; else echo "var is set to '$DEBUG'"; fi
+
 echo Debug: "${DEBUG,,}"
 
 if [ ! "${DEBUG,,}" ] && [ ! "${TRAVIS}" ]; then
@@ -37,8 +41,6 @@ python -Wall manage.py migrate
 # Collect static files
 echo "Collect static files"
 python -Wall manage.py collectstatic --noinput
-
-pip freeze
 
 echo "Run server..."
 gunicorn backend.wsgi -c gunicorn_conf.py
