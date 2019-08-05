@@ -3,7 +3,7 @@ services:
   api:
     build:
       context: .
-      dockerfile: DOCKERFILE
+      dockerfile: Dockerfile
     image: api
     command: ./bin/docker-entrypoint.sh
     volumes:

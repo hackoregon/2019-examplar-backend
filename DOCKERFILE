@@ -26,6 +26,6 @@ RUN chmod +x *.py
 # Copy settings and staticfiles to make sure they are baked into the container
 # rather than always expecting them to be mounted at runtime.
 COPY local_settings /code/src_files/local_settings
-# COPY staticfiles /code/src_files/staticfiles
+COPY staticfiles /code/src_files/staticfiles
 
 ENTRYPOINT [ "/code/src_files/bin/docker-entrypoint.sh" ]
