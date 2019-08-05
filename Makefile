@@ -34,7 +34,7 @@ test: ## run tests quickly with the default Python
 	pytest tests
 
 version:
-	bumpversion patch --config-file=./hackoregon_sandbox/setup.cfg
+	bumpversion patch --config-file=./hackoregon_examplar/setup.cfg
 
 # coverage: ## check code coverage quickly with the default Python
 # 	coverage run --source hackoregon_examplar/api pytest tests
