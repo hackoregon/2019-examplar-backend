@@ -37,6 +37,6 @@ HEALTH_CHECK = {
 
 DATABASE_ROUTERS = ['backend.router.ModelDatabaseRouter', ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, '/code/src_files/staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATIC_URL = '/hackoregon_examplar/static/'
+STATIC_URL = '/examplar/static/'
