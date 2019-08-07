@@ -32,6 +32,8 @@ fi
 
 chmod +x *.py
 
+ls
+
 echo "Make migrations"
 python -Wall manage.py makemigrations api
 
