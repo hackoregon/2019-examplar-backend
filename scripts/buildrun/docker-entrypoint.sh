@@ -16,7 +16,7 @@ if [ -z ${DEBUG+x} ]; then echo "DEBUG var is unset, setting to False" && export
 echo Debug: "${DEBUG,,}"
 
 if [ ! "${DEBUG,,}" ] && [ ! "${TRAVIS}" ]; then
-  source /code/bin/get-ssm-parameters.sh
+  source /code/src_files/scripts/deploy/get-ssm-parameters.sh
 fi
 
 if [ "$POSTGRES_NAME" ]; then
