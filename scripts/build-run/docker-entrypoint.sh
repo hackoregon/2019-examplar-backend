@@ -13,9 +13,12 @@ set -e
 
 if [ -z ${DEBUG+x} ]; then echo "DEBUG var is unset, setting to False" && export DEBUG=false ; else echo "var is set to '$DEBUG'"; fi
 
-echo Debug: "${DEBUG,,}"
+if [ -z ${TRAVIS+x} ]; then echo "DEBUG var is unset, setting to False" && export TRAVIS=false ; else echo "var is set to '$TRAVIS'"; fi
 
-if [ ! "${DEBUG,,}" ] && [ ! "${TRAVIS}" ]; then
+echo Debug: $DEBUG
+echo Travis: $TRAVIS
+
+if [ $DEBUG = "false" ] && [ $TRAVIS = "false" ]; then
   source /code/src_files/scripts/deploy/get-ssm-parameters.sh
 fi
 
