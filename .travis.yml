@@ -9,7 +9,6 @@ jobs:
 
     - stage: Test "Development" Docker Image
       if: tag IS present
-      # install: bin/fetch-scripts.sh
       script: scripts/build-run/build.sh -d
       # (_identical_ to production build except for -e
       # local directory package install indstead of PyPI.org)
