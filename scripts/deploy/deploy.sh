@@ -29,7 +29,7 @@ if [ -z "$TRAVIS_PULL_REQUEST" ] || [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
         docker push "$REMOTE_DOCKER_PATH":"$TAG"
 
         #echo Running ecs-deploy.sh script...
-        bin/ecs-deploy.sh  \
+        scripts/deploy/ecs-deploy.sh  \
            --service-name "$ECS_SERVICE_NAME" \
            --cluster "$ECS_CLUSTER"   \
            --image "$REMOTE_DOCKER_PATH":latest \
