@@ -40,7 +40,7 @@ jobs:
     #       tags: true
 
     - stage: Docker Image
-      # install: bin/fetch-scripts.sh
+      install: scripts/deploy/fetch-scripts.sh
       script: scripts/buildrun/build.sh -p
       before_deploy: pip install awscli
       deploy:
