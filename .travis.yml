@@ -10,7 +10,7 @@ jobs:
     - stage: Test "Development" Docker Image
       if: tag IS present
       # install: bin/fetch-scripts.sh
-      script: scripts/buildrun/build.sh -d
+      script: scripts/build-run/build.sh -d
       # (_identical_ to production build except for -e
       # local directory package install indstead of PyPI.org)
 
@@ -41,7 +41,7 @@ jobs:
 
     - stage: Docker Image
       install: scripts/deploy/fetch-scripts.sh
-      script: scripts/buildrun/build.sh -p
+      script: scripts/build-run/build.sh -p
       before_deploy: pip install awscli
       deploy:
         provider: script

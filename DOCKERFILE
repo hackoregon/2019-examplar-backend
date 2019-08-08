@@ -28,4 +28,4 @@ RUN chmod +x *.py
 COPY local_settings /code/src_files/local_settings
 COPY staticfiles /code/src_files/staticfiles
 
-ENTRYPOINT [ "/code/src_files/scripts/buildrun/docker-entrypoint.sh" ]
+ENTRYPOINT [ "/code/src_files/scripts/build-run/docker-entrypoint.sh" ]
