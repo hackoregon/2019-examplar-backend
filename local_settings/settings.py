@@ -6,8 +6,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = (os.environ.get('DEBUG').lower() == "true")
-DEBUG = True
+DEBUG = (os.environ.get('DEBUG').lower() == "true")
 
 ALLOWED_HOSTS = ['*']
 
@@ -29,7 +28,7 @@ INSTALLED_APPS = [
     'health_check.contrib.psutil',              # disk and memory utilization; requires psutil
     'api'
 ]
-#
+
 HEALTH_CHECK = {
     'DISK_USAGE_MAX': 90,  # percent
     'MEMORY_MIN': 100,    # in MB
