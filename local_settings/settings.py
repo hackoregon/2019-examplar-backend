@@ -28,7 +28,7 @@ INSTALLED_APPS = [
     'health_check.contrib.psutil',              # disk and memory utilization; requires psutil
     'api'
 ]
-#
+
 HEALTH_CHECK = {
     'DISK_USAGE_MAX': 90,  # percent
     'MEMORY_MIN': 100,    # in MB
@@ -38,4 +38,4 @@ DATABASE_ROUTERS = ['backend.router.ModelDatabaseRouter', ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATIC_URL = '/hackoregon_examplar/static/'
+STATIC_URL = '/examplar/static/'
