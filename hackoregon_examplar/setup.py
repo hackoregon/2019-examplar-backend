@@ -50,7 +50,7 @@ setup(
     author='Brian Grant',
     author_email='bhgrant8@gmail.com',
     url='https://github.com/hackoregon/2019-examplar-backend',
-    packages=setuptools.find_namespace_packages(include=['namespace.*']),
+    packages=setup.find_namespace_packages(include=['namespace.*']),
     include_package_data=True,
     license="MIT",
     zip_safe=False,
