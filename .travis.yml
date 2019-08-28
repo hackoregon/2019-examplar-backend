@@ -24,19 +24,19 @@ jobs:
     #     on:
     #       tags: true
 
-    # - stage: PyPI Package
-    #   install: pip install --upgrade pip
-    #   script: skip
-    #   before_deploy: cd hackoregon_sandbox && echo __version__ = \'"$TRAVIS_TAG"\' > VERSION
-    #   deploy:
-    #     provider: pypi
-    #     skip_cleanup: true
-    #     user: nam20485
-    #     password:
-    #       secure: I//IEfBaPhLruf7Jin/SJZJlcgCR3WBgW1mLQa2jVZX2db1jdn0dhzOSzFRNx+2I9iQu1I+lZexkp5tow/b2garuWCEkZbsmVtCty3zvjB8KtjS1EDnafGC15hz7WZEI8MwSsY2Ydwaj2qy43JvsmcBAaA/Xyp82PUXwBCdWL46IhdpQm/is9s60SUvUkfppkj3lOKO2lDreiEUrpUCJKvN51UETcL5Dz7eWE+Z9cQfzzqNzwjLXX2ufP40+VwsU6oZNf0xsG9EW7ZNP1mjHWsqc5AOZHPyoJ+gMULWtWjUwjfxJPNyBu36PPTU+H90Arkc8JGsSg/1SFOdnaokJDhnMPjT5v4506L3qa21vXULhMfzrWdWZ4Ot32rB1N2MvK0InCva1NxUgowcClu2g7Ey6S/KkQa/qlcrqOciJvE2tuIvvmbo5dw7DlLlIZXXKCADLDPktSiPKgE+zzTng54nlr3xm0nNA1Pko2Ts3zjdguedW2iF5rxeAdyqrCCBc+Xr1pVxkHIqV6syvByilCn95WJtp5yYDDPmY6Npza7wSavOJcrQhk5QneiKD549grGxxpwPLRSE6wI6Ae4Els6ucZgTeP99r2OaAnesNgujMffFStMTwaSa3QbKT0ttwf3B/q3b2UViiMHu8NWyuznQ/pVvclEwUOYpOxprDF7I=
-    #     distributions: sdist bdist_wheel
-    #     on:
-    #       tags: true
+    - stage: PyPI Package
+      install: pip install --upgrade pip
+      script: skip
+      before_deploy: cd hackoregon_examplar && echo __version__ = \'"$TRAVIS_TAG"\' > VERSION
+      deploy:
+        provider: pypi
+        skip_cleanup: true
+        user: __token__
+        password:
+          secure: Hrv29cokx88yq30L6abYOHOXxj5h35aBhhbcr0Bf6FQ2nxGXvoQDCeI6Ahx17oqU/biwIAECcYbGqFIZtE+Q2Uci1g3G1nqOrsKCbzB8Cjvq5Gdj0z79mYVd3oLnj5cUKEsMwEosP6SMRqC0Zs58DhNB4olbMZXSRVMh8eEViwSmXNc4RhOmwS78Q2nm7SAgegnvKdRgu46LTZsivEU4iA6cGjDd3VNxLOD1RJ7a/oFobYIShdvETb9tgzPc0ALC7OUVBUlN3sGMzHjUK3RDdz2nBswnTYrYBhkF5MV+af+mZ1qXI7Bmr7go0pPmIKalZn0NGVofw+YUWVhqNlm9gafh4eX1WWQBVTh0wekyGpKJ/qjO9eeysWKAWfJkucc/6QyE7sftcdszv8cKvAKYmmUX7eGHSWxbMIeg0pF1rtRpFI4fPp9cIJqCb8+IKLml3aAHu5ypQzjaa1Li04Z7XsyckOubqE/wSKnqla80CYV1r8HXenzbRoc/DfHWx8lM6CNhg/YbGMa1S6LGSpvo8zAnPst6HbnaxnmFzJbUUaag5Rw23JmDSH9w+RBFBQuZyNFii1VINKycJxs8/FReyUc+lQEAXhgxpXmAG7kpvly3uL4YEamH48OULBubwKTufbejKCDOf2U0l1T+dimiNqe1YD52dTbeIRCvEmSAIPM=
+        distributions: sdist bdist_wheel
+        on:
+          tags: true
 
     - stage: Docker Image
       install: scripts/deploy/fetch-scripts.sh
