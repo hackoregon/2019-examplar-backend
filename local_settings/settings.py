@@ -39,3 +39,5 @@ DATABASE_ROUTERS = ['backend.router.ModelDatabaseRouter', ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/examplar/static/'
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTOCOL", "https")
